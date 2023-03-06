@@ -5,13 +5,37 @@ class StudentData
 	Scanner input = new Scanner(System.in);
 	private String CMS_id;
 	private String name;
+	private double[] arrayOfSubjects ;
 	private double programming,pre_calculas,english,ict,pak_study,islamiat,programming_lab,ict_lab,GPA;
 	private double s1,s2,s3,s4,s5,s6,s7,s8;
+
+
+	private  String studentName;
+	private  String address;
+	private  String studentCMSID;
+	private  static int noOfLabCourses ;
+	private  static int noOfTheoryCourses ;
+	private  int[] labMarks ;
+	private  int []theoryMarks;
+	private  String[] nameOfLabCourses ; 
+	private  String[] nameOfTheoryCourses ;
+	//   String[] lab = nameOfLabCourses[noOfLabCourses], theory = nameOfTheoryCourses[noOfTheoryCourses]
+	//   String studentCoursesArray [nameOfLabCourses[] + nameOfTheoryCourses] ;
 
 	// Constructors
 	// Default
 	StudentData()
 	{
+		this.studentName = null ;
+		this.address = null ;
+		this.studentCMSID = null ;
+		labMarks = new int[noOfLabCourses] ;
+		theoryMarks = new int[noOfTheoryCourses] ;
+		nameOfLabCourses = new String[noOfLabCourses] ;
+		nameOfTheoryCourses = new String[noOfTheoryCourses] ;
+
+
+
 	}
 	// Parameterized
 	StudentData(String CMS_id,String name,double programming,double pre_calculas,double english,double ict,double pak_study,double islamiat,double programming_lab,double ict_lab)
