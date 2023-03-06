@@ -2,19 +2,19 @@ import java.util.Scanner;
 import java.lang.String;
 class StudentData
 {
-	Scanner input = new Scanner(System.in);
-	private String CMS_id;
-	private String name;
-	private double[] arrayOfSubjects ;
-	private double programming,pre_calculas,english,ict,pak_study,islamiat,programming_lab,ict_lab,GPA;
-	private double s1,s2,s3,s4,s5,s6,s7,s8;
+	// Scanner input = new Scanner(System.in);
+	// private String CMS_id;
+	// private String name;
+	// private double[] arrayOfSubjects ;
+	// private double programming,pre_calculas,english,ict,pak_study,islamiat,programming_lab,ict_lab,GPA;
+	// private double s1,s2,s3,s4,s5,s6,s7,s8;
 
 
 	private  String studentName;
 	private  String address;
 	private  String studentCMSID;
-	private  static int noOfLabCourses ;
-	private  static int noOfTheoryCourses ;
+	private  static int noOfLabCourses = 2;
+	private  static int noOfTheoryCourses  = 4;
 	private  int[] labMarks ;
 	private  int []theoryMarks;
 	private  String[] nameOfLabCourses ; 
@@ -38,19 +38,20 @@ class StudentData
 
 	}
 	// Parameterized
-	StudentData(String CMS_id,String name,double programming,double pre_calculas,double english,double ict,double pak_study,double islamiat,double programming_lab,double ict_lab)
+	StudentData(private String studentName;	private String address;	private String studentCMSID)
 	{
-		this.CMS_id = CMS_id;
-		this.name = name;
-		this.programming = programming;
-		this.pre_calculas = pre_calculas;
-		this.english = english;
-		this.ict = ict;
-		this.pak_study = pak_study;
-		this.islamiat = islamiat;
-		this.programming_lab = programming_lab;
-		this.ict_lab = ict_lab;
+		this.studentName = studentName ;
+		this.address = address ;
+		this.studentCMSID = studentCMSID ;
+
 	}
+
+	// Method to ask to initialize marks of subjects for theory and lab respectively
+
+	public void EnterTheoryMarks(){
+
+	} 
+
 	// METHOD FOR CORRECT OUT OF RANGE MARKS (0-100)
 	double WrongMarks100(double w_mark) 
 	{
@@ -881,6 +882,10 @@ class Student{
  *  // calculate if a person is pass or fail
  * 
  *  Classes
+ * 
+ * 	1) Students
+ *  2) Subjects
+ * 	3) Main Class
  * 
  *  main class => StudentGradePortal
  *  supporting class => Student - to hold all the information regarding student
